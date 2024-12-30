@@ -1,7 +1,11 @@
-// vite.config.js
-export default {
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
   server: {
-    port: 10000,  // or any port available on Render
-    host: '0.0.0.0',  // Listen on all network interfaces
+    port: 10000,      // or any port Render expects
+    host: '0.0.0.0',  // Ensures app is accessible from the network
   },
-};
+});
